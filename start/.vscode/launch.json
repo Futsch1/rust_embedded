@@ -14,7 +14,7 @@
             "cwd": "${workspaceRoot}",
             "preLaunchTask": "Cargo Build (debug)",
             "runToEntryPoint": "main",
-            "executable": "./target/thumbv7m-none-eabi/debug/start",
+            "executable": "./target/thumbv8m.main-none-eabi/debug/start",
             /* Run `cargo build --example hello` and uncomment this line to run semi-hosting example */
             //"executable": "./target/thumbv7m-none-eabi/debug/examples/hello",
             "cpu": "cortex-m3",
@@ -29,7 +29,7 @@
             "cwd": "${workspaceRoot}",
             "preLaunchTask": "Cargo Build (debug)",
             "runToEntryPoint": "main",
-            "executable": "./target/thumbv7em-none-eabihf/debug/start",
+            "executable": "./target/thumbv8em-none-eabihf/debug/start",
             /* Run `cargo build --example itm` and uncomment this line to run itm example */
             // "executable": "./target/thumbv7em-none-eabihf/debug/examples/itm",
             "device": "STM32F303VCT6",
@@ -44,7 +44,11 @@
                 "swoFrequency": 2000000,
                 "source": "probe",
                 "decoders": [
-                    { "type": "console", "label": "ITM", "port": 0 }
+                    {
+                        "type": "console",
+                        "label": "ITM",
+                        "port": 0
+                    }
                 ]
             }
         }
