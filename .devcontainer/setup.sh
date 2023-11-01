@@ -6,7 +6,9 @@ apt-get install -y \
   qemu-system-arm \
   curl \
   git \
-  gcc
+  gcc \
+  pkg-config \
+  libssl-dev
 
 ## Install rustup and common components
 curl https://sh.rustup.rs -sSf | sh -s -- -y 
